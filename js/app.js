@@ -40,9 +40,25 @@ var chooseProduct = function () {
 }
 
 
+//event handler
+var clickProduct = function (event) {
 
+    if(sumclicks <10) {
+      var productsClicked = event.target;
+      var id = productsClicked.id;
 
-// Create the Objects 
-// function createObject() {
-//   productFiles.forEach(Element => {
-//   }
+  if (id === 'productOne' || id === 'productTwo' ) {
+      if(id === 'productOne') {
+        productOne.clicks ++;
+      }
+    
+      productOne.sumviews ++;
+      productTwo.sumviews ++;
+      productThree.sumviews ++;
+  
+      pickNewProducts();
+  }
+}
+  imageSectionTag.addEventListener('click', clickProduct);
+
+}
