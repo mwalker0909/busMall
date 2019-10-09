@@ -1,7 +1,29 @@
 'use strict';
 //global variables
 
-var filePath = ['1.jpg', 'banana.jpg', 'boots.jpg', 'breakfast.jpg','bubblegum.jpg','chair.jpg','cthulhu.jpg','dog-duck.jpg','dragon.jpg','pen.jpg','pet-sweep.jpg','scissors.jpg','shark.jpg','sweep.png','tauntaun.jpg','unicorn.jpg','usb.gif','water-can.jpg','wine-glass.jpg'];
+// var filePath = ['1.jpg', 'banana.jpg', 'boots.jpg', 'breakfast.jpg','bubblegum.jpg','chair.jpg','cthulhu.jpg','dog-duck.jpg','dragon.jpg','pen.jpg','pet-sweep.jpg','scissors.jpg','shark.jpg','sweep.png','tauntaun.jpg','unicorn.jpg','usb.gif','water-can.jpg','wine-glass.jpg'];
+  var filePath = [
+  ['1.jpg','./img/1.jpg'],
+  ['banana.jpg'],
+  ['boots.jpg'],
+  ['breakfast.jpg'],
+  ['bubblegum.jpg'],
+  ['chair.jpg'],
+  ['cthulhu.jpg'],
+  ['dog-duck.jpg'],
+  ['dragon.jpg'],
+  ['pen.jpg'],
+  ['pet-sweep.jpg'],
+  ['scissors.jpg'],
+  ['shark.jpg'],
+  ['sweep.png'],
+  ['tauntaun.jpg'],
+  ['unicorn.jpg'],
+  ['usb.gif'],
+  ['water-can.jpg'],
+  ['wine-glass.jpg'],
+];
+
 var counter = 0 
 
 productOne = null;
@@ -47,23 +69,6 @@ var productOne = Math.ceil(Math.random() * Product.allImages.length -1);
 
 
 
-
-
-
-
-// var chooseProduct = function () {
-// productOne = getRandomProduct ();
-// productTwo = getRandomProduct ();
-// productThree = getRandomProduct ();
-//  if (productOne === productTwo || productThree) {
-//    chooseProduct();
-//   if (productTwo === productOne|| productTwo) {
-//    chooseProduct();
-//   if (productThree === productTwo || productOne) {
-//   chooseProduct();
-//  }
-// }
-
 renderProducts(productOne, productTwo, productThree);
 
 //event handler
@@ -87,6 +92,25 @@ var clickProduct = function (event) {
 }
   imageSectionTag.addEventListener('click', clickProduct)
   }
+
+
+
+  // chartjs iteration MPV 1
+
+  var chooseProduct = function () {
+    productOne = getRandomProduct ();
+    productTwo = getRandomProduct ();
+    productThree = getRandomProduct ();
+      if (productOne === productTwo || productThree) {
+       chooseProduct();
+      }
+      if (productTwo === productOne|| productTwo) {
+       chooseProduct();
+      }
+      if (productThree === productTwo || productOne) {
+      chooseProduct();
+      }
+    }
 
 
   // Insert chart into busMall
