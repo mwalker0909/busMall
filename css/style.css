@@ -1,6 +1,33 @@
-.imageDiv {
-  max-height: 150px;
-max-width: 200px;
-width: 120px;
-height: 120px;
+
+#leftProduct {
+  position: absolute;
+  left: 200px;
+  top: 500px;
+  z-index: -1;
+}
+
+#centerProduct {
+  position: absolute;
+  left: 800px;
+  top: 500px;
+  z-index: -1;
+}
+
+#rightProduct {
+  position: absolute;
+  left: 1400px;
+  top: 500px;
+  z-index: -1;
+}
+
+h1 {
+  text-align: center
+}
+
+h2 {
+  text-align: center
+}
+
+h3 {
+  text-align: center
 }
