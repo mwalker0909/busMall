@@ -42,6 +42,12 @@ function product(name, filePath) {
 };
 
 product.allImages= [];
+// create array for local storage
+
+function updateLocalStorage(){
+  var storage = JSON.stringify(product.allImages);
+  localStorage.setItem('product', storage);
+}
 
 
 // creating array for products
@@ -179,3 +185,4 @@ var myChart = new Chart(ctx, {
     }
 });
 
+updateLocalStorage();
