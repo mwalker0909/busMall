@@ -39,9 +39,29 @@ function product(name, filePath) {
   this.sumclicks = 0
   product.allImages.push(this);
 
+  updateLocalStorage(); 
+  arrString = JSON.stringify(product.allImages);
+  localStorage.setItem('product', arrString);
 };
 
 product.allImages= [];
+// create array for local storage
+
+function updateLocalStorage(){
+  var storage = JSON.stringify(product.allImages);
+  localStorage.setItem('product', storage);
+  localStorage.setItem('product object', product.allimages);
+}
+
+function getproduct() {
+  var data = localStorage.getItem('product');
+  var productData = JSON.parse(data);
+
+  if (productData !== null){
+    product.allImages = productData;
+  }
+}
+renderProducts();
 
 
 // creating array for products
@@ -70,6 +90,7 @@ var productOne = Math.ceil(Math.random() * Product.allImages.length -1);
 
 
 renderProducts(productOne, productTwo, productThree);
+
 
 //event handler
 var clickProduct = function (event) {
@@ -179,3 +200,4 @@ var myChart = new Chart(ctx, {
     }
 });
 
+updateLocalStorage();
