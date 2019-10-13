@@ -62,7 +62,7 @@ function getPreviousData() {
   var localData = localStorage.getItem('data');
   var productData = JSON.parse(localData);
 
-  // if the data is not null, have product data equate to Product.allimgages
+  // if the data is not null, have product data equate to Product.allimages
   if (productData !== null) {
     Product.allImages = productData;
   }
@@ -191,7 +191,7 @@ var chartLabels = function(images) {
   return labelsArr;
 };
 
-// This function keeps track of total clicks and pushes that into the data array. then returns the data array
+// This function keeps track of total clicks and pushes that information into the data array. then returns the data array
 var chartData = function(images) {
   var dataArr = [];
   for (var i = 0; i < images.length; i++) {
@@ -200,7 +200,7 @@ var chartData = function(images) {
   return dataArr;
 };
 
-// Function to hold # of usersSeenThis for chart data
+// Function to hold number of 'usersSeenThis' for chart data
 var chartShown = function(images) {
   var shownData = [];
   for (var i = 0; i < images.length; i++) {
@@ -209,7 +209,7 @@ var chartShown = function(images) {
   return shownData;
 };
 
-// Random RGB function
+// Random RGB function. using this on the bottom of the chart to randomly generate colors to the bar charts. 
 var randomRGB = function() {
   var max = 255;
   var min = 0;

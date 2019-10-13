@@ -100,7 +100,7 @@ left: 125px;
 top: 650px;
 z-index: -1;
 }
-
+/* this ends my coping of trevor's exact code */
 #chartDiv,
 #chartDiv2 {
   position: absolute;
