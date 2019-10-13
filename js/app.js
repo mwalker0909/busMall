@@ -24,7 +24,7 @@
   ['wine-glass.jpg'],
 ];
 
-var counter = 0 
+var counter = 0 ;
 
 productOne = null;
 productTwo = null;
@@ -35,8 +35,8 @@ productThree = null;
 function product(name, filePath) {
   this.name = name;
   this.filePath = filePath;
-  this.sumviews = 0
-  this.sumclicks = 0
+  this.sumviews = 0;
+  this.sumclicks = 0;
   product.allImages.push(this);
 
   updateLocalStorage(); 
@@ -56,7 +56,6 @@ function updateLocalStorage(){
 function getproduct() {
   var data = localStorage.getItem('product');
   var productData = JSON.parse(data);
-
   if (productData !== null){
     product.allImages = productData;
   }
@@ -66,7 +65,7 @@ renderProducts();
 
 // creating array for products
 
-var renderProducts = function (productOne, productTwo, productThree) {
+var renderProducts = function (productOne, productTwo, productThree) {sss
 
   leftProduct.src = product.allImages[productOne].filePath;
   centerProduct.src = product.allImages[productTwo].filePath;
