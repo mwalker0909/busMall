@@ -1,4 +1,3 @@
 # busMall
-BusMall
-
-Week 3 - Weekly Lab s
+ This project really threw me a loop. I had attempted many (many) different ways of solving problems. In the end, I caved and relied heavily on different classmates code to compelte the assignment. Much of my work is emulating travis and trevors work. I wrote every line by line. Every character other than the image array was typed out by me. I spent addtional time looking thrugh things I didn't understand and MDN'ing things I could not figure out what they were doing. The only thing I still could not comprehend is js line 235 where mychart is not used but it is part of the function. when I attempt to // it out, it breaks everything. I have left this in but it is intentional. 
+ this assignement was likely the most I have learned in the past few weeks. I knowingly say that most of this code was not my ideas, but my comprehension is VASTLY increased by writing all of this out and commenting each section. This has clarified much of my worries, concerns, and lack of knowledge. I hope in the future I do not have to rely on others code when i'm strugging, but for busMall, i'm happy to give credit to these guys for figuring it out and look forward to more challenging assignments like this to come. 
