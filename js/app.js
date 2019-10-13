@@ -123,7 +123,7 @@ var pickNewImages = function() {
   renderimages (leftIndex, rightIndex, middleIndex);
 };
 
-// Using an event listener to account for the click count and showing new images for users to pick
+// Using an event listener to account for the click count and showing new images for users to pick. nested if also keeps track of total clicks
 var handleClickOnImg = function(event) {
   if (count < totalRounds) {
     var clickedImage = event.target;
@@ -143,7 +143,7 @@ var handleClickOnImg = function(event) {
       firstImageOnPage.usersSeenThis++;
       thirdImageOnPage.usersSeenThis++;
       secondImageOnPage.usersSeenThis++;
-      
+
       pickNewImages();
     }
   }
@@ -159,10 +159,10 @@ var handleClickOnImg = function(event) {
 
 imageSectionTag.addEventListener('click', handleClickOnImg);
 
-// Invokes function to pull images from array of images
+// Invokes function to grab the images from the array of images we have inserted from the list of given images. 
 pickNewImages();
 
-// Generates results to body
+// Generates results to the body  of the chart. 
 function displayResults() {
 
   var main = document.getElementById('results');
@@ -182,16 +182,16 @@ function displayResults() {
   main.appendChild(div);
 }
 
-// Function to display image labels
+// Function that shows the image labels on the chart at the bottom. 
 var chartLabels = function(images) {
-  var labelsArr = [];
+  var labelsArr  = [];
   for (var i = 0; i < images.length; i++) {
-    labelsArr.push(images[i].name);
+    labelsArr .push(images[i].name);
   }
   return labelsArr;
 };
 
-// Function to hold # of totalClicks for chart data
+// This function keeps track of total clicks and pushes that into the data array. then returns the data array
 var chartData = function(images) {
   var dataArr = [];
   for (var i = 0; i < images.length; i++) {
@@ -229,23 +229,23 @@ var chartColors = function() {
   return backgroundColor;
 };
 
-// Chart integration
+// Creating and displaying the chartjs bar chart. 
 function displayBarChart() {
   var ctx = document.getElementById('myChart').getContext('2d');
-  var myChart = new Chart(ctx, {
+    var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: chartLabels(Product.allImages),
       datasets: [
         {
-          label: '# of totalClicks',
+          label: 'Number of clicks',
           data: chartData(Product.allImages),
           backgroundColor: chartColors(),
           borderColor: chartColors(),
           borderWidth: 1
         },
         {
-          label: '# of Times Shown',
+          label: 'Number of times seen by users',
           data: chartShown(Product.allImages),
           backgroundColor: chartColors(),
           borderColor: chartColors(),

@@ -11,9 +11,11 @@ img {
   margin-left: 9%;
   border-color:grey;
 }
+
 #imageContainer {
   margin-top: 315px;
 }
+
 #imageOne {
   margin-top: 125px;
   border: solid;
@@ -74,7 +76,12 @@ ul {
 
 li {
   text-transform: capitalize;
-  padding: 3px;
+  padding: 5px;
+  text-decoration-color: honeydew;
+  color: rgb(214, 16, 16);
+  text-shadow: indianred;
+  font-size: 18px;
+  font-style: bold;
 }
 
 /* In this section, I have written this every character, but copied verbatum Trevor's code to understand what flex is doing */
