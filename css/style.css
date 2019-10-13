@@ -25,29 +25,29 @@ img {
   border-radius: 10px;
   size: 250%;
   left: 285px;
-  top: 175px;
+  top: 155px;
   z-index: -1;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 #imagep2 {
   position: absolute;
   border-radius: 10px;
   size: 250%;
-  left: 785px;
-  top: 65px;
+  left: 775px;
+  top: 45px;
   z-index: -1;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 #imagep3 {
   position: absolute;
   border-radius: 10px;
   size: 250%;
-  left: 1265px;
-  top: 175px;
+  left: 1245px;
+  top: 160px;
   z-index: -1;
-  font-size: 18px;
+  font-size: 28px;
 }
 #imageTwo {
   border: solid;
@@ -90,7 +90,7 @@ li {
   border-radius: 10px;
   size: 250%;
 left: 125px;
-top: 540px;
+top: 650px;
 z-index: -1;
 }
 
