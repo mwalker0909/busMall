@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>busMall</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-  <body id="body">
-    <h1>Cool pics from CodeFellows</h1>
-    <h2>Please pic one of the three pictures</h2>
-    <h2>We will give you ten sets to pick your favorites!</h2>
-    <div id="imageDivOne" class="imageDiv">
-        <img id ='ProductOne' src="./img/banana.jpg" alt="" class="productIMG">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BusMall</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="imageContainer">
+      <img id="imageOne" src="" alt="" />
+      <img id="imageTwo" src="" alt="" />
+      <img id="imageThree" src="" alt="" />
     </div>
 
-    <div id="iamgeDivTwo" class="imageDiv">
-      <img id="productTwo" src="./img/dog-duck.jpg" alt="" class="productIMG">
+    <div id="results">
+      <div id="chartDiv">
+        <canvas id="myChart" width="1000" height="800"></canvas>
+      </div>
+      <div id="chartDiv2">
+        <canvas id="conversionChart" width="1000" height="800"></canvas>
+      </div>
     </div>
-
-    <div id="imageDivThree" class="imageDiv">
-      <img id="productThree" src="./img/wine-glass.jpg" alt="" class="productIMG">
-    </div>
-
-    <!-- <div id="chart"> I will need to add this later -->
-    <!-- </div> -->
-
-    <canvas id="myChart" width="400" height="400"></canvas>
-    <script src="./js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="./js/app.js"></script>
 </html>
