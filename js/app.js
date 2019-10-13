@@ -1,5 +1,6 @@
 'use strict';
 
+
 // Preassigning global Variables
 var imageSectionTag = document.getElementById('imageContainer');
 var leftImageTag = document.getElementById('imageOne');
@@ -84,7 +85,7 @@ Product.prototype.conversionRatio = function() {
 
 
 // render the images to the DOM. 
-var renderNewImages = function(leftIndex, rightIndex, middleIndex) {
+var renderimages  = function(leftIndex, rightIndex, middleIndex) {
   leftImageTag.src = Product.allImages[leftIndex].imgURL;
   middleImageTag.src = Product.allImages[middleIndex].imgURL;
   rightImageTag.src = Product.allImages[rightIndex].imgURL;
@@ -99,7 +100,7 @@ var pickNewImages = function() {
   while(Product.allImages[leftIndex].lastShown) {
     leftIndex = Math.ceil(Math.random() * Product.allImages.length - 1);
   }
-  // 
+  // using || to state 'or' right index lastshown to ensure not like the last image
   while(rightIndex === leftIndex || Product.allImages[rightIndex].lastShown) {
     rightIndex = Math.ceil(Math.random() * Product.allImages.length - 1);
   }
@@ -111,17 +112,18 @@ var pickNewImages = function() {
   }
 
   firstImageOnPage = Product.allImages[leftIndex];
-  thirdImageOnPage = Product.allImages[rightIndex];
   secondImageOnPage = Product.allImages[middleIndex];
+  thirdImageOnPage = Product.allImages[rightIndex];
 
+  // change from global false to true prior to rendering these new images. 
   Product.allImages[leftIndex].lastShown = true;
   Product.allImages[rightIndex].lastShown = true;
   Product.allImages[middleIndex].lastShown = true;
 
-  renderNewImages(leftIndex, rightIndex, middleIndex);
+  renderimages (leftIndex, rightIndex, middleIndex);
 };
 
-// Event Listener tracking totalClicks and displaying new images upon click
+// Using an event listener to account for the click count and showing new images for users to pick
 var handleClickOnImg = function(event) {
   if (count < totalRounds) {
     var clickedImage = event.target;
@@ -141,14 +143,14 @@ var handleClickOnImg = function(event) {
       firstImageOnPage.usersSeenThis++;
       thirdImageOnPage.usersSeenThis++;
       secondImageOnPage.usersSeenThis++;
-
+      
       pickNewImages();
     }
   }
   count++;
   if (count === totalRounds) {
     imageSectionTag.removeEventListener('click', handleClickOnImg);
-    alert('You have seen 25 rounds of images! Thanks for participating.');
+    alert('That\'s all 25 images. Hooray you\'re done!');
     updateLocalStorage();
     displayResults();
     displayBarChart();

@@ -1,0 +1,106 @@
+body {
+  background-color: rgba(98, 112, 46, 0.486)
+}
+
+
+img {
+  max-width: 55%;
+  max-height: 380px;
+  border-radius: 88px;
+  border: 14px green;
+  margin-left: 9%;
+  border-color:grey;
+}
+#imageContainer {
+  margin-top: 315px;
+}
+#imageOne {
+  margin-top: 125px;
+  border: solid;
+  border-color: greenyellow;
+}
+
+#imagep1 {
+  position: absolute;
+  border-radius: 10px;
+  size: 250%;
+  left: 285px;
+  top: 175px;
+  z-index: -1;
+  font-size: 18px;
+}
+
+#imagep2 {
+  position: absolute;
+  border-radius: 10px;
+  size: 250%;
+  left: 785px;
+  top: 65px;
+  z-index: -1;
+  font-size: 18px;
+}
+
+#imagep3 {
+  position: absolute;
+  border-radius: 10px;
+  size: 250%;
+  left: 1265px;
+  top: 175px;
+  z-index: -1;
+  font-size: 18px;
+}
+#imageTwo {
+  border: solid;
+  border-color: red
+}
+ 
+#imageThree {
+  margin-top: 125px;  
+  border: solid;
+  border-color: blueviolet
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 0;
+}
+
+ul {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+li {
+  text-transform: capitalize;
+  padding: 3px;
+}
+
+/* In this section, I have written this every character, but copied verbatum Trevor's code to understand what flex is doing */
+#imageContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#results {
+  position: absolute;
+  border-radius: 10px;
+  size: 250%;
+left: 125px;
+top: 540px;
+z-index: -1;
+}
+
+#chartDiv,
+#chartDiv2 {
+  position: absolute;
+  border-radius: 10px;
+  size: 50%;
+left: 625px;
+top: 40px;
+width: 153%;
+z-index: -1;
+}
